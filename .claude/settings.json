@@ -48,7 +48,14 @@
       "Bash(rm -f \"C:/Users/Saeef/AppData/Local/Temp/claude/g--Lumshot-website/bf655c63-d9dd-4315-a725-431b086e6faa/scratchpad/\"featonly.* \"C:/Users/Saeef/AppData/Local/Temp/claude/g--Lumshot-website/bf655c63-d9dd-4315-a725-431b086e6faa/scratchpad/feat-rows.png\" 2>/dev/null; echo cleaned)",
       "Bash(rm -f \"C:/Users/Saeef/AppData/Local/Temp/claude/g--Lumshot-website/bf655c63-d9dd-4315-a725-431b086e6faa/scratchpad/\"iconswap.* 2>/dev/null; echo cleaned)",
       "Bash(rm -f \"C:/Users/Saeef/AppData/Local/Temp/claude/g--Lumshot-website/bf655c63-d9dd-4315-a725-431b086e6faa/scratchpad/\"dl*.* 2>/dev/null; echo cleaned)",
-      "Bash(rm -f \"C:/Users/Saeef/AppData/Local/Temp/claude/g--Lumshot-website/bf655c63-d9dd-4315-a725-431b086e6faa/scratchpad/\"spacing*.* \"C:/Users/Saeef/AppData/Local/Temp/claude/g--Lumshot-website/bf655c63-d9dd-4315-a725-431b086e6faa/scratchpad/full.png\" 2>/dev/null; echo cleaned)"
+      "Bash(rm -f \"C:/Users/Saeef/AppData/Local/Temp/claude/g--Lumshot-website/bf655c63-d9dd-4315-a725-431b086e6faa/scratchpad/\"spacing*.* \"C:/Users/Saeef/AppData/Local/Temp/claude/g--Lumshot-website/bf655c63-d9dd-4315-a725-431b086e6faa/scratchpad/full.png\" 2>/dev/null; echo cleaned)",
+      "Bash(git -C \"g:\\\\Lumshot website\" status --short)",
+      "Bash(git -C \"g:\\\\Lumshot website\" log --oneline -3)",
+      "Bash(git -C \"g:\\\\Lumshot website\" remote -v)",
+      "Bash(git -C \"g:\\\\Lumshot website\" status -sb)",
+      "Bash(git -C \"g:\\\\Lumshot website\" fetch origin --quiet)",
+      "Bash(git -C \"g:\\\\Lumshot website\" log --oneline origin/master -3)",
+      "Bash(git -C \"g:\\\\Lumshot website\" rev-list --left-right --count origin/master...master)"
     ],
     "additionalDirectories": [
       "C:\\Users\\Saeef\\AppData\\Local\\Temp\\claude\\g--Lumshot-website\\e9a9110d-8647-43f6-95cf-cbc4fa50e7cb\\scratchpad",
