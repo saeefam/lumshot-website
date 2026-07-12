@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const downloadTriggers = document.querySelectorAll('[data-download-trigger]');
 
   if (modal && downloadForm && downloadEmail && downloadNote && downloadTriggers.length) {
-    let fallbackHref = downloadTriggers[0].getAttribute('href') || '';
+    let fallbackHref = downloadTriggers[0].getAttribute('data-download-href') || '';
     let lastFocused = null;
 
     const setNote = (message, tone) => {
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
     downloadTriggers.forEach((trigger) => {
       trigger.addEventListener('click', (event) => {
         event.preventDefault();
-        openModal(trigger.getAttribute('href'));
+        openModal(trigger.getAttribute('data-download-href'));
       });
     });
 

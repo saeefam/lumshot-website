@@ -45,7 +45,10 @@
       "Bash(curl -s -i -X OPTIONS \"https://lumshot-email-capture.bowndulee.workers.dev\" -H \"Origin: https://lumshot.app\" -H \"Access-Control-Request-Method: POST\" --max-time 20)",
       "Bash(curl -s -i -X OPTIONS \"https://lumshotemail.bowndulee.workers.dev/\" -H \"Origin: https://lumshot.app\" -H \"Access-Control-Request-Method: POST\" --max-time 20)",
       "Bash(curl -s -i -X POST \"https://lumshotemail.bowndulee.workers.dev/\" -H \"Content-Type: application/json\" -d '{\"name\":\"Test\",\"email\":\"test@example.com\",\"subject\":\"Curl test\",\"message\":\"Hello from curl\"}' --max-time 20)",
-      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" -X OPTIONS \"https://lumshotemail.bowndulee.workers.dev\" -H \"Origin: https://lumshot.app\" -H \"Access-Control-Request-Method: POST\" --max-time 20)"
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" -X OPTIONS \"https://lumshotemail.bowndulee.workers.dev\" -H \"Origin: https://lumshot.app\" -H \"Access-Control-Request-Method: POST\" --max-time 20)",
+      "Bash(rm -f \"C:/Users/Saeef/AppData/Local/Temp/claude/g--Lumshot-website/bf655c63-d9dd-4315-a725-431b086e6faa/scratchpad/\"featonly.* \"C:/Users/Saeef/AppData/Local/Temp/claude/g--Lumshot-website/bf655c63-d9dd-4315-a725-431b086e6faa/scratchpad/feat-rows.png\" 2>/dev/null; echo cleaned)",
+      "Bash(rm -f \"C:/Users/Saeef/AppData/Local/Temp/claude/g--Lumshot-website/bf655c63-d9dd-4315-a725-431b086e6faa/scratchpad/\"iconswap.* 2>/dev/null; echo cleaned)",
+      "Bash(rm -f \"C:/Users/Saeef/AppData/Local/Temp/claude/g--Lumshot-website/bf655c63-d9dd-4315-a725-431b086e6faa/scratchpad/\"dl*.* 2>/dev/null; echo cleaned)"
     ],
     "additionalDirectories": [
       "C:\\Users\\Saeef\\AppData\\Local\\Temp\\claude\\g--Lumshot-website\\e9a9110d-8647-43f6-95cf-cbc4fa50e7cb\\scratchpad",

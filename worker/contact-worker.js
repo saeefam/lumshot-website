@@ -158,7 +158,7 @@ function buildText({ name, email, subject, message }) {
     `Message:`,
     message,
     ``,
-    `— Reply to this email to respond directly to ${name}.`,
+    `Reply to this email to respond directly to ${name}.`,
   ].join('\n');
 }
 

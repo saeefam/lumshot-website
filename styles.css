@@ -814,6 +814,11 @@ button {
   fill: currentColor;
 }
 
+/* Outline-style icons: stroke, not fill (paths already set fill="none") */
+.lum-icon-stroke {
+  fill: none;
+}
+
 .feat-more-icon .lum-icon,
 .why-icon .lum-icon {
   width: 20px;
