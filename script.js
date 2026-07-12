@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --- waitlist / early-bird forms (email capture -> Worker) ---
-  const WAITLIST_ENDPOINT = 'https://lumshotemail.bowndulee.workers.dev';
+  const WAITLIST_ENDPOINT = 'https://lumshotemailsubscription.bowndulee.workers.dev';
 
   const wireWaitlist = (formId, noteId) => {
     const form = document.getElementById(formId);
