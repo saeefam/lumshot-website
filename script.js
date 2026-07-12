@@ -161,28 +161,58 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- waitlist form (Kit/ConvertKit placeholder) ---
-  const form = document.getElementById('lum-form');
-  if (form) {
-    form.addEventListener('submit', (event) => {
+  // --- waitlist / early-bird forms (email capture -> Worker) ---
+  const WAITLIST_ENDPOINT = 'https://lumshotemail.bowndulee.workers.dev';
+
+  const wireWaitlist = (formId, noteId) => {
+    const form = document.getElementById(formId);
+    const note = document.getElementById(noteId);
+    if (!form) return;
+
+    form.addEventListener('submit', async (event) => {
       event.preventDefault();
       const input = form.querySelector('input');
-      const note = document.getElementById('lum-form-note');
-      if (input && input.value && input.value.indexOf('@') > 0) {
-        if (note) {
-          note.textContent = 'You are on the list. (Connect your Kit form to go live.)';
-          note.style.color = '#5EE0CB';
-        }
-        input.value = '';
-      } else if (note) {
-        note.textContent = 'Enter a valid email address.';
-        note.style.color = '#ff8a8a';
+      const button = form.querySelector('button[type="submit"]');
+      const email = input ? input.value.trim() : '';
+
+      const setNote = (msg, color) => {
+        if (!note) return;
+        note.textContent = msg;
+        note.style.color = color;
+      };
+
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        setNote('Enter a valid email address.', '#ff8a8a');
+        return;
+      }
+
+      if (button) button.disabled = true;
+      if (input) input.disabled = true;
+      setNote('Joining...', '');
+
+      try {
+        const res = await fetch(WAITLIST_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, source: 'waitlist' }),
+        });
+        if (!res.ok) throw new Error('Request failed');
+        if (input) input.value = '';
+        setNote("You're on the list. We'll email you at launch.", '#5EE0CB');
+      } catch (err) {
+        setNote('Something went wrong. Please try again.', '#ff8a8a');
+      } finally {
+        if (button) button.disabled = false;
+        if (input) input.disabled = false;
       }
     });
-  }
+  };
+
+  wireWaitlist('lum-form', 'lum-form-note');          // pricing card early-bird
+  wireWaitlist('lum-waitlist', 'lum-waitlist-note');  // standalone waitlist section
 
   // --- download modal (email capture -> Worker -> ConvertKit -> redirect) ---
-  const EMAIL_CAPTURE_ENDPOINT = 'https://lumshot-email-capture.bowndulee.workers.dev';
+  const EMAIL_CAPTURE_ENDPOINT = 'https://lumshotemailsubscription.bowndulee.workers.dev';
 
   const modal = document.getElementById('lum-download-modal');
   const downloadForm = document.getElementById('lum-download-form');

@@ -730,7 +730,7 @@ button {
   z-index: 1;
   max-width: var(--container-xs);
   margin: 0 auto;
-  padding: 72px 24px 30px;
+  padding: 96px 24px 40px;
   text-align: center;
 }
 
@@ -781,7 +781,7 @@ button {
   z-index: 1;
   max-width: var(--container-md);
   margin: 0 auto;
-  padding: 120px 24px 40px;
+  padding: 140px 24px 60px;
 }
 
 .feat-row {
@@ -1338,7 +1338,7 @@ button {
   z-index: 1;
   max-width: var(--container-md);
   margin: 0 auto;
-  padding: 120px 24px 40px;
+  padding: 140px 24px 60px;
 }
 
 .roadmap .section-head {
@@ -1390,12 +1390,80 @@ button {
   color: var(--color-text-muted-55);
 }
 
-/* Shared: waitlist status note (used by the pricing early-bird form) */
+/* Shared: waitlist status note (pricing early-bird + waitlist forms) */
 .waitlist-note {
   margin: 14px 0 0;
   font-size: 13px;
   color: var(--text-hairline);
   transition: color .2s;
+}
+
+/* ---------- Early-bird / waitlist ---------- */
+.early-bird {
+  position: relative;
+  z-index: 1;
+  padding: 96px 24px;
+}
+
+.early-bird-card {
+  max-width: 760px;
+  margin: 0 auto;
+  border-radius: 24px;
+  padding: clamp(40px, 5.5vw, 64px);
+  text-align: center;
+  background:
+    radial-gradient(120% 130% at 50% 0%, rgba(33, 210, 187, .16), transparent 60%),
+    var(--color-bg-card);
+  border: 1px solid var(--border-accent);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, .4);
+}
+
+.early-bird-title {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4.6vw, 46px);
+  letter-spacing: -.03em;
+  font-weight: 700;
+  margin: 0;
+}
+
+.early-bird-text {
+  margin: 20px auto 0;
+  max-width: 54ch;
+  font-size: clamp(16px, 2.2vw, 18px);
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.waitlist-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 32px auto 0;
+  max-width: 500px;
+}
+
+.waitlist-form input {
+  flex: 1;
+  min-width: 200px;
+  padding: 15px 18px;
+  border-radius: 12px;
+  background: rgba(10, 11, 13, .6);
+  border: 1px solid rgba(255, 255, 255, .14);
+  color: #fff;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.waitlist-form input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(33, 210, 187, .25);
+}
+
+.waitlist-form .btn {
+  flex-shrink: 0;
 }
 
 /* ---------- Pricing ---------- */
@@ -1404,7 +1472,7 @@ button {
   z-index: 1;
   max-width: var(--container-md);
   margin: 0 auto;
-  padding: 80px 24px 40px;
+  padding: 140px 24px 60px;
 }
 
 .pricing-split {
@@ -1552,7 +1620,7 @@ button {
   z-index: 1;
   max-width: 780px;
   margin: 0 auto;
-  padding: 120px 24px 40px;
+  padding: 140px 24px 60px;
 }
 
 .faq .section-head {
@@ -1621,7 +1689,7 @@ button {
 .final-cta {
   position: relative;
   z-index: 1;
-  padding: 90px 24px;
+  padding: 160px 24px 170px;
   text-align: center;
   overflow: hidden;
 }
@@ -1679,7 +1747,7 @@ button {
 .footer-grid {
   max-width: var(--container-md);
   margin: 0 auto;
-  padding: 56px 24px 30px;
+  padding: 72px 24px 40px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 40px;
