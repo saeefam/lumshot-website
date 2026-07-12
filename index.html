@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumshot — Beautiful, Share-Ready Screenshots in Seconds</title>
+<meta name="description" content="Capture, beautify, annotate, and share screenshots in seconds. Built-in OCR and on-device privacy. A faster screenshot workflow. Pay once, no subscription.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="page">
+
+<!-- ambient hero glow -->
+<div class="hero-glow" aria-hidden="true"></div>
+
+<!-- ===================== NAV ===================== -->
+<nav id="lum-nav" class="nav">
+  <div id="lum-navbox" class="nav-box">
+    <a href="#top" aria-label="Lumshot home" class="nav-logo">
+      <img src="assets/logo.svg" alt="Lumshot" class="nav-logo-img">
+      <span class="nav-beta">BETA</span>
+    </a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#usecases">Use cases</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-actions">
+      <a href="#pricing" class="btn btn-primary btn-nav">Get Lumshot</a>
+      <button id="lum-burger" class="nav-burger" aria-label="Open menu" aria-controls="lum-mobile" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+  <div id="lum-mobile" class="nav-mobile">
+    <a href="#features">Features</a>
+    <a href="#usecases">Use cases</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a href="#pricing" class="nav-mobile-cta">Get Lumshot</a>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<header id="top" class="hero">
+  <div class="pill">
+    <span class="pill-dot"></span>
+    The fastest way to a screenshot worth sharing
+  </div>
+  <h1 class="hero-title">Beautiful screenshots, instantly</h1>
+  <p class="hero-sub">Capture, beautify, and share in one motion. Lumshot handles the polish so you stay in flow.</p>
+  <div class="hero-ctas">
+    <a href="#pricing" class="btn btn-primary btn-lg">
+      <span class="win-icon" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </span>
+      Download for Windows
+    </a>
+    <span class="btn btn-disabled btn-lg">
+      <svg viewBox="0 0 384 512" class="mac-icon" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path></svg>
+      Mac — Coming soon
+    </span>
+  </div>
+  <p class="hero-note">Free to use. No account needed.</p>
+
+  <!-- hero product shot -->
+  <div id="hero-shot" class="hero-shot">
+    <div class="hero-shot-float">
+      <div class="hero-shot-glow" aria-hidden="true"></div>
+      <!-- app window -->
+      <div class="app-window">
+        <div class="app-titlebar">
+          <div class="app-titlebar-left">
+            <span class="app-name">Lumshot</span>
+          </div>
+          <div class="app-titlebar-right">
+            <span class="chip chip-active">Beautify</span>
+            <span class="chip">Annotate</span>
+            <span class="chip">OCR</span>
+            <div class="app-window-controls">
+              <span class="ctrl-line"></span>
+              <span class="ctrl-square"></span>
+              <span class="ctrl-close">✕</span>
+            </div>
+          </div>
+        </div>
+        <!-- canvas: beautified screenshot on gradient -->
+        <div class="app-canvas">
+          <div role="img" aria-label="A plain screenshot mid-transform into a polished Lumshot output, framed on a violet gradient with padding and a soft drop shadow" class="shot-frame">
+            <div class="shot-titlebar">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="shot-image">
+              <img src="assets/screenshot.png" alt="Lumshot editor showing a beautified revenue chart screenshot" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== CREDIBILITY ===================== -->
+<section class="credibility" data-reveal>
+  <p class="credibility-text">Built by an indie maker behind tools used by 100,000+ designers.</p>
+  <div class="badge-row">
+    <span class="badge">Offline OCR</span>
+    <span class="badge">On-device privacy</span>
+    <span class="badge">One-time purchase</span>
+    <span class="badge">Auto-updates</span>
+  </div>
+</section>
+
+<!-- ===================== WORKFLOW SHIFT ===================== -->
+<section class="workflow" data-reveal>
+  <h2 class="section-title-lg">One screenshot shouldn't need three apps.</h2>
+  <p class="section-sub-lg">Capture, edit, hide the private bits, export. Lumshot collapses that into one hotkey.</p>
+  <div class="workflow-steps">
+    <div class="workflow-card">
+      <div class="workflow-num">01</div>
+      <p class="workflow-text">One hotkey to capture.</p>
+    </div>
+    <div class="workflow-card">
+      <div class="workflow-num">02</div>
+      <p class="workflow-text">Beautiful the instant you snap it.</p>
+    </div>
+    <div class="workflow-card">
+      <div class="workflow-num">03</div>
+      <p class="workflow-text">Done before you'd normally start editing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FEATURES ===================== -->
+<section id="features" class="features">
+  <div class="section-head" data-reveal>
+    <div class="eyebrow">Features</div>
+    <h2 class="section-title">Everything it needs. Nothing it doesn't.</h2>
+  </div>
+
+  <!-- Feature 1: beautify -->
+  <div class="feat-row" data-reveal>
+    <div class="feat-copy">
+      <div class="feat-icon">
+        <span class="icon-swatch"></span>
+      </div>
+      <h3 class="feat-title">Snap it. It's already beautiful.</h3>
+      <p class="feat-desc">Gradient backgrounds, padding, shadows, and rounded corners land automatically the moment you capture. Tweak if you want, or just export.</p>
+    </div>
+    <div class="media">
+      <div class="feat-media-frame feat-media-gradient">
+        <div class="feat-media-inner">
+          <div class="shot-image">
+            <img src="assets/screenshot.png" alt="Lumshot editor showing a beautified revenue chart screenshot" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature 2: capture (reversed) -->
+  <div class="feat-row feat-row-reverse" data-reveal>
+    <div class="media">
+      <div class="mock mock-capture">
+        <div class="mock-diagonal-fade"></div>
+        <div class="mock-scrim"></div>
+        <div class="mock-select-box">
+          <span class="mock-select-label">820 × 410</span>
+          <span class="mock-select-handle mock-select-handle-br"></span>
+          <span class="mock-select-handle mock-select-handle-tl"></span>
+        </div>
+        <div class="mock-toolbar">
+          <span class="toolbar-btn toolbar-btn-active">Region</span>
+          <span class="toolbar-btn">Window</span>
+          <span class="toolbar-btn">Full</span>
+          <span class="toolbar-btn">Scroll</span>
+        </div>
+        <span class="mock-caption">[ scrolling capture overlay ]</span>
+      </div>
+    </div>
+    <div class="feat-copy">
+      <div class="feat-icon">
+        <span class="icon-dashed-square"></span>
+      </div>
+      <h3 class="feat-title">Capture the whole thing, not just what fits.</h3>
+      <p class="feat-desc">Region, window, full screen, or a long scrolling page, all from a single shortcut.</p>
+    </div>
+  </div>
+
+  <!-- Feature 3: annotate -->
+  <div class="feat-row" data-reveal>
+    <div class="feat-copy">
+      <div class="feat-icon">
+        <span class="icon-arrow-mark"></span>
+      </div>
+      <h3 class="feat-title">Point to what matters.</h3>
+      <p class="feat-desc">Arrows, text, highlights, blur, shapes, and numbered steps that make a screenshot explain itself.</p>
+    </div>
+    <div class="media">
+      <div class="mock mock-annotate">
+        <div class="mock-diagonal-fade mock-diagonal-fade-plain"></div>
+        <div class="mock-arrow">
+          <span class="mock-arrow-head"></span>
+        </div>
+        <div class="mock-circle"></div>
+        <div class="mock-num mock-num-1">1</div>
+        <div class="mock-num mock-num-2">2</div>
+        <div class="mock-highlight"></div>
+        <span class="mock-caption">[ annotated screenshot ]</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature 4: OCR (reversed) -->
+  <div class="feat-row feat-row-reverse" data-reveal>
+    <div class="media">
+      <div class="mock mock-ocr">
+        <div class="mock-ocr-body">
+          <div class="mock-ocr-label">OCR mode · offline</div>
+          <div class="mock-ocr-lines">
+            <div class="ocr-line ocr-line-accent" style="width:88%"></div>
+            <div class="ocr-line ocr-line-accent" style="width:72%"></div>
+            <div class="ocr-line" style="width:80%"></div>
+            <div class="ocr-line" style="width:60%"></div>
+          </div>
+        </div>
+        <div class="mock-ocr-toast">
+          <span class="icon-check-square"></span>
+          <span class="mock-ocr-toast-text">Text copied</span>
+        </div>
+        <span class="mock-caption">[ OCR mode: selectable text ]</span>
+      </div>
+    </div>
+    <div class="feat-copy">
+      <div class="feat-icon">
+        <span class="icon-letter">A</span>
+      </div>
+      <h3 class="feat-title">Get the text out, instantly.</h3>
+      <p class="feat-desc">Lumshot reads any screenshot and hands you the text. Copy it, search it, save it. It all happens on your machine, even offline.</p>
+    </div>
+  </div>
+
+  <!-- Feature 5: redact -->
+  <div class="feat-row" data-reveal>
+    <div class="feat-copy">
+      <div class="feat-icon">
+        <span class="icon-shield"><span></span></span>
+      </div>
+      <h3 class="feat-title">Share confidently, hide the private stuff.</h3>
+      <p class="feat-desc">Auto-Redact spots emails, card numbers, phone numbers, IPs, and SSNs and covers them before anything leaves your screen. Nothing gets uploaded to do it.</p>
+    </div>
+    <div class="media">
+      <div class="mock mock-redact">
+        <div class="redact-fields">
+          <div class="redact-field">
+            <div class="redact-label">Email</div>
+            <div class="redact-value">jordan@company.com<span class="redact-blur"></span></div>
+          </div>
+          <div class="redact-field">
+            <div class="redact-label">Card number</div>
+            <div class="redact-value">4242 4242 4242 4242<span class="redact-blur"></span></div>
+          </div>
+          <div class="redact-field">
+            <div class="redact-label">IP address</div>
+            <div class="redact-value">192.168.0.114<span class="redact-blur"></span></div>
+          </div>
+        </div>
+        <div class="redact-badge">
+          <span class="redact-badge-dot"></span>
+          <span>5 redacted</span>
+        </div>
+        <span class="mock-caption mock-caption-bottom">[ redacted sensitive data ]</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature 6: out of your way (reversed) -->
+  <div class="feat-row feat-row-reverse" data-reveal>
+    <div class="media">
+      <div class="mock mock-tabs">
+        <div class="mock-tabbar">
+          <span class="tab tab-active">Bug report</span>
+          <span class="tab">Hero shot</span>
+          <span class="tab">Receipt</span>
+          <span class="tab-add">+</span>
+        </div>
+        <div class="mock-tab-body">
+          <div class="tab-line"></div>
+          <div class="tab-canvas"></div>
+        </div>
+        <div class="mock-pin">
+          <span class="toolbar-btn toolbar-btn-active">Pin to Screen</span>
+        </div>
+        <span class="mock-caption mock-caption-mid">[ multi-tab editor ]</span>
+      </div>
+    </div>
+    <div class="feat-copy">
+      <div class="feat-icon">
+        <span class="icon-dots"><span></span><span></span><span></span><span></span></span>
+      </div>
+      <h3 class="feat-title">Built to disappear into your work.</h3>
+      <p class="feat-desc">Multiple tabs, pin a shot on top, quick tray access, and updates that handle themselves.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== USE CASES ===================== -->
+<section id="usecases" class="usecases">
+  <div class="section-head" data-reveal>
+    <div class="eyebrow">Use cases</div>
+    <h2 class="section-title">For everyone who lives in screenshots.</h2>
+  </div>
+  <div class="usecase-grid" data-reveal>
+    <div class="usecase-card">
+      <div class="usecase-label">Developers</div>
+      <p class="usecase-text">Grab an error, pull the stack trace as text, and send a bug report people can actually act on.</p>
+    </div>
+    <div class="usecase-card">
+      <div class="usecase-label">Designers and makers</div>
+      <p class="usecase-text">Post work that looks as good as it is, on X, LinkedIn, and Dribbble.</p>
+    </div>
+    <div class="usecase-card">
+      <div class="usecase-label">Support and QA</div>
+      <p class="usecase-text">Annotate, redact, and reply in the time you used to spend cropping.</p>
+    </div>
+    <div class="usecase-card">
+      <div class="usecase-label">Writers and educators</div>
+      <p class="usecase-text">Turn any screen into a clean, readable visual for docs and tutorials.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY ===================== -->
+<section class="why">
+  <div class="section-head" data-reveal>
+    <div class="eyebrow">Why Lumshot</div>
+    <h2 class="section-title">Why people stick with it.</h2>
+  </div>
+  <div class="why-grid" data-reveal>
+    <div class="why-card">
+      <div class="why-icon"><span class="icon-check"></span></div>
+      <h3 class="why-title">Fast where it counts.</h3>
+      <p class="why-text">The polish happens automatically, so a great screenshot takes seconds, not a side quest.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><span class="icon-circle"></span></div>
+      <h3 class="why-title">Pay once, keep it.</h3>
+      <p class="why-text">No subscription, no renewal nag. Buy it and it's yours.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><span class="icon-shield"><span></span></span></div>
+      <h3 class="why-title">Privacy you don't think about.</h3>
+      <p class="why-text">OCR and redaction run on your device. Your screens stay yours.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><span class="icon-dots"><span></span><span></span><span></span><span></span></span></div>
+      <h3 class="why-title">Polished, never bloated.</h3>
+      <p class="why-text">Everything you need, nothing you have to wade through.</p>
+    </div>
+  </div>
+
+  <!-- comparison table -->
+  <div class="compare-wrap" data-reveal>
+    <div class="compare-scroll">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th class="compare-th-label">Compare</th>
+            <th class="compare-th-main">Lumshot</th>
+            <th>Built-in tool</th>
+            <th>Heavy power tool</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Beautiful output</td>
+            <td class="compare-td-main">✓</td>
+            <td class="compare-td-no">·</td>
+            <td class="compare-td-dim">✓</td>
+          </tr>
+          <tr>
+            <td>Scrolling capture</td>
+            <td class="compare-td-main">✓</td>
+            <td class="compare-td-no">·</td>
+            <td class="compare-td-dim">✓</td>
+          </tr>
+          <tr>
+            <td>Offline OCR</td>
+            <td class="compare-td-main">✓</td>
+            <td class="compare-td-no">·</td>
+            <td class="compare-td-dim">✓</td>
+          </tr>
+          <tr>
+            <td>Auto-redact</td>
+            <td class="compare-td-main">✓</td>
+            <td class="compare-td-no">·</td>
+            <td class="compare-td-no">·</td>
+          </tr>
+          <tr>
+            <td>One-time price</td>
+            <td class="compare-td-main">✓</td>
+            <td class="compare-td-dim">✓</td>
+            <td class="compare-td-no">·</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AI ROADMAP ===================== -->
+<section class="roadmap">
+  <div class="section-head" data-reveal>
+    <div class="eyebrow">Roadmap</div>
+    <h2 class="section-title">It reads today. It'll understand soon</h2>
+    <p class="section-sub">Already extracts and redacts on-device. Here's what's next, on your own AI key, still nothing to subscribe to</p>
+  </div>
+  <div class="roadmap-grid" data-reveal>
+    <div class="roadmap-card">
+      <span class="badge-soon">Coming soon</span>
+      <h3 class="roadmap-title">Explain this capture.</h3>
+      <p class="roadmap-text">Turn a confusing error or screen into a plain explanation.</p>
+    </div>
+    <div class="roadmap-card">
+      <span class="badge-soon">Coming soon</span>
+      <h3 class="roadmap-title">Send to your AI assistant.</h3>
+      <p class="roadmap-text">One shortcut from screenshot to your AI tools.</p>
+    </div>
+    <div class="roadmap-card">
+      <span class="badge-soon">Coming soon</span>
+      <h3 class="roadmap-title">Screenshot to data.</h3>
+      <p class="roadmap-text">Tables and receipts become clean, usable text.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EARLY-BIRD ===================== -->
+<section class="early-bird">
+  <div class="early-bird-card" data-reveal>
+    <h2 class="early-bird-title">Be first, and pay less.</h2>
+    <p class="early-bird-text">Lumshot launches soon. Join the early list and lock in the $19 launch price before it settles at $29. One email when it's ready, nothing else.</p>
+    <!-- KIT (ConvertKit) PLACEHOLDER FORM — replace this form with your Kit embed -->
+    <form id="lum-form" class="waitlist-form">
+      <input type="email" placeholder="you@email.com" aria-label="Email address" required>
+      <button type="submit" class="btn btn-primary">Join the list</button>
+    </form>
+    <p id="lum-form-note" class="waitlist-note">No spam. Unsubscribe anytime.</p>
+    <p class="waitlist-placeholder">[ placeholder: connect Kit (ConvertKit) form embed here ]</p>
+  </div>
+</section>
+
+<!-- ===================== PRICING ===================== -->
+<section id="pricing" class="pricing">
+  <div class="section-head" data-reveal>
+    <div class="eyebrow">Pricing</div>
+    <h2 class="section-title">Free during beta.</h2>
+  </div>
+  <div class="pricing-row" data-reveal>
+    <div class="pricing-card">
+      <div class="pricing-plan">Free</div>
+      <div class="pricing-amount"><span>$0</span></div>
+      <p class="pricing-desc">Lumshot is in beta — every feature is free to use while we build toward v1.</p>
+      <a href="#" class="btn btn-secondary">Download free</a>
+    </div>
+  </div>
+  <p class="pricing-footnote">No credit card. No subscription.</p>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section id="faq" class="faq">
+  <div class="section-head" data-reveal>
+    <div class="eyebrow">FAQ</div>
+    <h2 class="section-title">Questions, answered.</h2>
+  </div>
+  <div class="faq-list" data-reveal>
+    <div class="faq-item" data-faq>
+      <button class="faq-question" data-faq-q>
+        <span>Is Lumshot free?</span>
+        <span class="faq-icon" data-faq-i>+</span>
+      </button>
+      <div class="faq-answer" data-faq-a><p>Yes, for now. Lumshot is free during the beta. Once we launch v1, it'll be a one-time purchase of $29.</p></div>
+    </div>
+    <div class="faq-item" data-faq>
+      <button class="faq-question" data-faq-q>
+        <span>Does it work offline?</span>
+        <span class="faq-icon" data-faq-i>+</span>
+      </button>
+      <div class="faq-answer" data-faq-a><p>Yes. Capturing, beautifying, and reading text all happen locally. Your screens never get uploaded.</p></div>
+    </div>
+    <div class="faq-item" data-faq>
+      <button class="faq-question" data-faq-q>
+        <span>What's the difference between Free and Pro?</span>
+        <span class="faq-icon" data-faq-i>+</span>
+      </button>
+      <div class="faq-answer" data-faq-a><p>Free gives you every feature with a small watermark on exports. Pro removes it and lets you use your own.</p></div>
+    </div>
+    <div class="faq-item" data-faq>
+      <button class="faq-question" data-faq-q>
+        <span>Is my data private?</span>
+        <span class="faq-icon" data-faq-i>+</span>
+      </button>
+      <div class="faq-answer" data-faq-a><p>Completely. Text extraction and redaction run on your device. Nothing leaves it.</p></div>
+    </div>
+    <div class="faq-item" data-faq>
+      <button class="faq-question" data-faq-q>
+        <span>What do I need to run it?</span>
+        <span class="faq-icon" data-faq-i>+</span>
+      </button>
+      <div class="faq-answer" data-faq-a><p>A recent Windows 10 or 11 desktop. macOS support is on the way.</p></div>
+    </div>
+    <div class="faq-item" data-faq>
+      <button class="faq-question" data-faq-q>
+        <span>How do updates work?</span>
+        <span class="faq-icon" data-faq-i>+</span>
+      </button>
+      <div class="faq-answer" data-faq-a><p>Lumshot keeps itself up to date automatically.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="final-cta">
+  <div class="final-cta-glow" aria-hidden="true"></div>
+  <div class="final-cta-inner" data-reveal>
+    <h2 class="final-cta-title">Your next screenshot could be your best one.</h2>
+    <p class="final-cta-text">Free to download. Yours to keep.</p>
+    <div class="final-cta-actions">
+      <a href="#pricing" class="btn btn-primary btn-lg">Download Lumshot</a>
+      <a href="#top" class="btn btn-secondary btn-lg">Join the early list</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#top" aria-label="Lumshot home" class="footer-logo">
+        <img src="assets/logo.svg" alt="Lumshot" class="footer-logo-img">
+      </a>
+      <p class="footer-tagline">Beautiful, share-ready screenshots in seconds.</p>
+      <p class="footer-made-by">Made by an indie maker.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Product</div>
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#pricing">Download</a>
+        <a href="#">Roadmap</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Resources</div>
+      <div class="footer-links">
+        <a href="#">Docs</a>
+        <a href="#">Support</a>
+        <a href="#">Changelog</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Legal</div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copyright">© Lumshot 2026</span>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/company/lumshot/" aria-label="X" class="social-btn">X</a>
+      <a href="https://www.linkedin.com/company/lumshot/" aria-label="LinkedIn" class="social-btn">in</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

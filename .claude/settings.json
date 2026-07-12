@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Program Files/Google/Chrome/Application//**)",
+      "Read(//c/Program Files \\\\\\(x86\\\\\\)/Microsoft/Edge/Application//**)",
+      "Bash(mkdir -p \"/c/Users/Saeef/AppData/Local/Temp/claude/g--Lumshot-website/e9a9110d-8647-43f6-95cf-cbc4fa50e7cb/scratchpad\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --dump-dom --virtual-time-budget=8000 \"file:///g:/Lumshot website/Lumshot Landing Page.html\")",
+      "Read(//c/Users/Saeef/AppData/Local/Temp/claude/g--Lumshot-website/e9a9110d-8647-43f6-95cf-cbc4fa50e7cb/scratchpad/**)",
+      "Bash(grep -noE '<img[^>]*|background-image[^;\"]*|src=\"blob:[^\"]*\"|src=\"data:[^\"]{0,80}' \"C:\\\\Users\\\\Saeef\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\g--Lumshot-website\\\\e9a9110d-8647-43f6-95cf-cbc4fa50e7cb\\\\scratchpad\\\\dump.html\")",
+      "Bash(awk 'NR==200{print length\\($0\\)}' \"g:\\\\Lumshot website\\\\Lumshot Landing Page.html\")",
+      "Bash(awk 'NR==200' \"g:\\\\Lumshot website\\\\Lumshot Landing Page.html\")",
+      "Bash(awk '{print NR\": \"length\\($0\\)}' \"g:\\\\Lumshot website\\\\Lumshot Landing Page.html\")",
+      "Bash(sort -t: -k2 -rn)",
+      "Bash(awk 'NR==208' \"g:\\\\Lumshot website\\\\Lumshot Landing Page.html\")",
+      "Bash(node extract.js)",
+      "Bash(node extract_template.js)",
+      "Bash(node extract_template2.js)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --dump-dom \"file:///g:/Lumshot website/index.html\")",
+      "Bash(echo \"exit: $?\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --screenshot=\"C:\\\\Users\\\\Saeef\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\g--Lumshot-website\\\\e9a9110d-8647-43f6-95cf-cbc4fa50e7cb\\\\scratchpad\\\\screenshot.png\" --window-size=1440,2400 \"file:///g:/Lumshot website/index.html\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --screenshot=\"C:\\\\Users\\\\Saeef\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\g--Lumshot-website\\\\e9a9110d-8647-43f6-95cf-cbc4fa50e7cb\\\\scratchpad\\\\screenshot2.png\" --window-size=1440,2400 --virtual-time-budget=3000 \"file:///g:/Lumshot website/index.html\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --window-size=1440,3200 --screenshot=\"/c/Users/Saeef/AppData/Local/Temp/claude/g--Lumshot-website/e9a9110d-8647-43f6-95cf-cbc4fa50e7cb/scratchpad/rebuilt.png\" \"file:///g:/Lumshot website/index.html\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --window-size=1440,3200 --virtual-time-budget=5000 --screenshot=\"/c/Users/Saeef/AppData/Local/Temp/claude/g--Lumshot-website/e9a9110d-8647-43f6-95cf-cbc4fa50e7cb/scratchpad/original.png\" \"file:///g:/Lumshot website/Lumshot Landing Page.html\")"
+    ]
+  }
+}
