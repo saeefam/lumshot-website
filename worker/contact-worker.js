@@ -16,7 +16,7 @@
  *
  * ---- Config: set these as vars in wrangler.toml (or edit the
  *      fallbacks below). ----
- *   CONTACT_TO      inbox that receives messages (e.g. lumshotapp@gmail.com)
+ *   CONTACT_TO      inbox that receives messages (e.g. contact@lumshot.app)
  *   CONTACT_FROM    verified sender. "onboarding@resend.dev" works with no
  *                   DNS setup; switch to "Lumshot <contact@lumshot.app>"
  *                   after verifying lumshot.app in Resend.
@@ -25,7 +25,7 @@
  */
 
 const DEFAULTS = {
-  CONTACT_TO: 'lumshotapp@gmail.com',
+  CONTACT_TO: 'contact@lumshot.app',
   CONTACT_FROM: 'Lumshot Contact <onboarding@resend.dev>',
   ALLOWED_ORIGIN: '*',
 };

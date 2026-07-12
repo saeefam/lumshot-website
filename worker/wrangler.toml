@@ -4,7 +4,7 @@ compatibility_date = "2024-11-01"
 
 # Non-secret config. Edit these to match your setup.
 [vars]
-CONTACT_TO = "lumshotapp@gmail.com"
+CONTACT_TO = "contact@lumshot.app"
 # Works with no DNS setup. After verifying lumshot.app in Resend, switch to:
 #   CONTACT_FROM = "Lumshot Contact <contact@lumshot.app>"
 CONTACT_FROM = "Lumshot Contact <onboarding@resend.dev>"

@@ -9,7 +9,7 @@ sees it — that's the whole point of this extra piece.
 ## What you get
 
 - Visitor submits **name / email / subject / message** on `contact.html`.
-- Worker emails it to **lumshotapp@gmail.com** with `Reply-To` set to the
+- Worker emails it to **contact@lumshot.app** with `Reply-To` set to the
   visitor, so hitting **Reply** in Gmail answers them directly.
 - Spam honeypot + input validation + length caps built in.
 
