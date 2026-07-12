@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Lumshot — Get in touch</title>
+  <meta name="description"
+    content="Questions, feedback, or a bug to report? Send the Lumshot team a message and we'll get back to you.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- ambient glow -->
+    <div class="hero-glow" aria-hidden="true"></div>
+
+    <!-- ===================== NAV ===================== -->
+    <nav id="lum-nav" class="nav">
+      <div id="lum-navbox" class="nav-box">
+        <a href="index.html#top" aria-label="Lumshot home" class="nav-logo">
+          <img src="assets/logo.svg" alt="Lumshot" class="nav-logo-img">
+          <span class="nav-beta">BETA</span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html#features">Features</a>
+          <a href="index.html#usecases">Use cases</a>
+          <a href="index.html#pricing">Pricing</a>
+          <a href="index.html#faq">FAQ</a>
+        </div>
+        <div class="nav-actions">
+          <a href="index.html#pricing" class="btn btn-primary btn-nav">Get Lumshot</a>
+          <button id="lum-burger" class="nav-burger" aria-label="Open menu" aria-controls="lum-mobile"
+            aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+      <div id="lum-mobile" class="nav-mobile">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#usecases">Use cases</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#pricing" class="nav-mobile-cta">Get Lumshot</a>
+      </div>
+    </nav>
+
+    <!-- ===================== CONTACT ===================== -->
+    <main class="contact">
+      <div class="contact-head" data-reveal>
+        <div class="eyebrow">Contact</div>
+        <h1 class="contact-title">Let's talk.</h1>
+        <p class="contact-sub">Bug reports, feature ideas, press, or just saying hi — send a note and a real human
+          (the one who built Lumshot) will get back to you.</p>
+      </div>
+
+      <div class="contact-layout" data-reveal>
+        <!-- left: reassurance / channels -->
+        <aside class="contact-aside">
+          <div class="contact-info-card">
+            <div class="contact-info-icon">
+              <svg class="lum-icon" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"></path></svg>
+            </div>
+            <h2 class="contact-info-title">Email us directly</h2>
+            <p class="contact-info-text">Prefer your own mail app? Reach us at</p>
+            <a href="mailto:lumshotapp@gmail.com" class="contact-info-link">lumshotapp@gmail.com</a>
+          </div>
+
+          <ul class="contact-points">
+            <li>
+              <span class="contact-point-icon" aria-hidden="true">
+                <svg class="lum-icon" viewBox="0 0 256 256"><path d="M232,128A104,104,0,1,1,128,24,104.13,104.13,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Zm-42.34-29.66L112,148.69,82.34,119a8,8,0,0,0-11.32,11.31l36,36a8,8,0,0,0,11.32,0l60-60a8,8,0,0,0-11.32-11.32Z"></path></svg>
+              </span>
+              <span>Usually answered within a day or two.</span>
+            </li>
+            <li>
+              <span class="contact-point-icon" aria-hidden="true">
+                <svg class="lum-icon" viewBox="0 0 256 256"><path d="M208,40H48A16,16,0,0,0,32,56v58.79c0,89.13,75.47,118.44,90.59,123.4a15.66,15.66,0,0,0,10.82,0C148.53,233.23,224,203.92,224,114.79V56A16,16,0,0,0,208,40Zm0,74.79c0,78.42-66.35,104.62-80,109.18-13.53-4.51-80-30.69-80-109.18V56H208ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.68l50.34-50.34a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"></path></svg>
+              </span>
+              <span>Your message is sent over an encrypted connection.</span>
+            </li>
+            <li>
+              <span class="contact-point-icon" aria-hidden="true">
+                <svg class="lum-icon" viewBox="0 0 256 256"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"></path></svg>
+              </span>
+              <span>Include your OS and app version to speed up bug reports.</span>
+            </li>
+          </ul>
+        </aside>
+
+        <!-- right: the form -->
+        <div class="contact-form-card">
+          <form id="lum-contact-form" class="contact-form" novalidate>
+            <div class="contact-field-row">
+              <div class="contact-field">
+                <label for="cf-name">Name</label>
+                <input type="text" id="cf-name" name="name" autocomplete="name" placeholder="Jordan Lee" required>
+              </div>
+              <div class="contact-field">
+                <label for="cf-email">Email</label>
+                <input type="email" id="cf-email" name="email" autocomplete="email" placeholder="you@email.com"
+                  required>
+              </div>
+            </div>
+            <div class="contact-field">
+              <label for="cf-subject">Subject <span class="contact-optional">(optional)</span></label>
+              <input type="text" id="cf-subject" name="subject" placeholder="What's this about?">
+            </div>
+            <div class="contact-field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="6" placeholder="Tell us what's on your mind…"
+                required></textarea>
+            </div>
+
+            <!-- honeypot: hidden from humans, catches bots -->
+            <div class="contact-hp" aria-hidden="true">
+              <label for="cf-company">Company</label>
+              <input type="text" id="cf-company" name="company" tabindex="-1" autocomplete="off">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg contact-submit" id="cf-submit">
+              <span class="cf-submit-label">Send message</span>
+            </button>
+            <p id="cf-note" class="contact-note" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html#top" aria-label="Lumshot home" class="footer-logo">
+            <img src="assets/logo.svg" alt="Lumshot" class="footer-logo-img">
+          </a>
+          <p class="footer-tagline">Beautiful, share-ready screenshots in seconds.</p>
+          <p class="footer-made-by">Made by an indie maker.</p>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Product</div>
+          <div class="footer-links">
+            <a href="index.html#features">Features</a>
+            <a href="index.html#usecases">Use cases</a>
+            <a href="index.html#pricing">Pricing</a>
+            <a href="index.html#roadmap">Roadmap</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Get Lumshot</div>
+          <div class="footer-links">
+            <a href="https://github.com/saeefam/lumshot/releases/download/v1.1.3/Lumshot-Setup-1.1.3.exe">Download for
+              Windows</a>
+            <a href="index.html#faq">FAQ</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copyright">© Lumshot 2026</span>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/lumshot/" target="_blank" rel="noopener"
+            aria-label="Lumshot on LinkedIn" class="social-btn">in</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

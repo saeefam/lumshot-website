@@ -1,0 +1,16 @@
+name = "lumshotmail"
+main = "contact-worker.js"
+compatibility_date = "2024-11-01"
+
+# Non-secret config. Edit these to match your setup.
+[vars]
+CONTACT_TO = "lumshotapp@gmail.com"
+# Works with no DNS setup. After verifying lumshot.app in Resend, switch to:
+#   CONTACT_FROM = "Lumshot Contact <contact@lumshot.app>"
+CONTACT_FROM = "Lumshot Contact <onboarding@resend.dev>"
+# Lock this to your real site origin in production for CORS safety.
+# Example: ALLOWED_ORIGIN = "https://lumshot.app"
+ALLOWED_ORIGIN = "*"
+
+# RESEND_API_KEY is a SECRET — never put it here.
+# Set it with:  wrangler secret put RESEND_API_KEY
